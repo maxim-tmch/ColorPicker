@@ -1,0 +1,192 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.color-picker {
+  display: flex;
+  border: 1px solid #9b9b9b;
+  max-width: 300px;
+  min-height: 35px;
+  border-radius: 3px;
+  color: #9b9b9b;
+  font-weight: 700;
+  margin: 0 auto;
+}
+.color-picker .main-input {
+  border: none;
+  padding: 10px 10px;
+  flex-grow: 1;
+  outline: none;
+  border-radius: 3px;
+  color: #9b9b9b;
+  font-weight: 700;
+  cursor:text;
+}
+.color-picker input:disabled {
+  background-color: #fff;
+}
+.color-picker-box {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  border-right: 1px solid #9b9b9b;
+  border-left: 1px solid #9b9b9b;
+  position: relative;
+}
+.color-picker-box .item {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.range-dropdown {
+  position: absolute;
+  top: 130%;
+  right: -35px;
+  width: 250px;
+  border: 1px solid #9b9b9b;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.range-dropdown .range-line {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.range-dropdown .range-line:last-child {
+  margin-bottom: 0;
+}
+.range-dropdown .range-line span {
+  display: block;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+.range-dropdown .range-line input {
+  flex-grow:1;
+  display: block;
+}
+.range-dropdown .range-dropdown-buttons {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+.range-dropdown .range-dropdown-buttons .btn {
+  padding: 5px 10px;
+  border:none;
+  margin-left: 5px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  color: #9b9b9b;
+  text-transform: uppercase;
+  transition:all 0.3s ease;
+}
+.range-dropdown .range-dropdown-buttons .btn-cancel {
+  background-color: #d1d2d3;
+}
+.range-dropdown .range-dropdown-buttons .btn-cancel:hover {
+  background-color:#708090;
+  color:#fff;
+}
+.range-dropdown .range-dropdown-buttons .btn-submit {
+  background-color: #6BA559;
+  color: #fff;
+}
+.range-dropdown .range-dropdown-buttons .btn-submit:hover {
+  background-color: #32CD32;
+}
+.color-picker-dropdown {
+  min-width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+.color-picker-dropdown i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.color-picker-dropdown i:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7.5px 7.5px 0 7.5px;
+  border-color: #9b9b9b transparent transparent transparent;
+}
+.color-picker-dropdown-list {
+  position: absolute;
+  list-style-type: none;
+  top: 130%;
+  right: 0;
+  width: 150px;
+  border: 1px solid #9b9b9b;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.color-picker-dropdown-list:after,
+.color-picker-dropdown-list:before,
+.range-dropdown:after,
+.range-dropdown:before {
+  bottom: 100%;
+  right: 10px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.range-dropdown:after,
+.range-dropdown:before {
+  right: 44px;
+}
+
+.color-picker-dropdown-list:after,.range-dropdown:after {
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #ffffff;
+  border-width: 6px;
+  margin-left: -6px;
+}
+.color-picker-dropdown-list:before,.range-dropdown:before {
+  border-color: rgba(155, 155, 155, 0);
+  border-bottom-color: #9b9b9b;
+  border-width: 7px;
+  margin-right: -1px;
+}
+.color-picker-dropdown-list li {
+  border-top: 1px solid #9b9b9b;
+  padding: 7.5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: calc(100% + 1px);
+  font-size: 14px;
+}
+.color-picker-dropdown-list li:hover {
+  background-color: #3276b5;
+  color: #fff;
+}
+.color-picker-dropdown-list li:first-child {
+  border-top: 0;
+}
+.color-picker-dropdown-list .dropdown-item {
+  width: 15px;
+  height: 15px;
+  display: block;
+}
